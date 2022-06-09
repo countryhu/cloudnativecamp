@@ -1,0 +1,2 @@
+# github.com/golang/glog v1.0.0
+## explicit; go 1.11

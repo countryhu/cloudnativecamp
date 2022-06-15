@@ -67,10 +67,11 @@ func healthz(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Printf("run in main.")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/healthz", healthz)
-	err := http.ListenAndServe(":80", mux)
+	err := http.ListenAndServe(":3680", mux)
 	if err != nil {
 		log.Fatalf("ListenAndServe failed.")
 	}
